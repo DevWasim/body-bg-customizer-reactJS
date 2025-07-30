@@ -1,40 +1,28 @@
+import { useState } from "react";
+
 function Body() {
     
-    
+    let [color, setColor] = useState("#ffff");
 
-    let changeStyle = (e) => {
-        const input = e.view.prompt("Enter Your Favorite Color :  ⬇");
-        if (input) document.body.style.backgroundColor = input
-        return;
-    };
+    let changeColor = (evt) => {
+        setColor(evt.target.value)
+    }
 
-    return (
-        <div onClick={(e) => changeStyle(e)} style={{backgroundColor: {changeStyle}}}>
+
+
+    return(
+        <div className="main-div">
+            <div className="container" style={{backgroundColor: color}}></div>
+            
+            <h4>You Pick <span style={{color: color}}>{color}</span> Color</h4>
+
+            <input type="color" onChange={changeColor} value={color}/>
         </div>
-    );
+    )
 }
     
 
 
 export default Body;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

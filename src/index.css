@@ -1,20 +1,29 @@
-.profile-pic {
-    width: 150px;
-    height: 150px;
-}
-body{
-    background-color: #270404a9;
-}
-
-div {
-    width: 100vw;
-    height: 100vh;
-    color: #1b7dc2;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
+.main-div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1d0a70, #232325);
+  font-family: 'Segoe UI', sans-serif;
 }
 
+.container {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
+input[type="color"] {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
